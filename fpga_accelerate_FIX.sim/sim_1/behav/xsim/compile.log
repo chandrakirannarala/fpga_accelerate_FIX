@@ -1,0 +1,5 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/chandrakiran/fpga_accelerate_FIX/fpga_accelerate_FIX.srcs/sources_1/new/prepend_ethernet_header.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module prepend_ethernet_header
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/chandrakiran/fpga_accelerate_FIX/fpga_accelerate_FIX.srcs/sim_1/new/prepend_ethernet_header_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module prepend_ethernet_header_tb
+WARNING: [VRFC 10-8497] literal value 'd8 truncated to fit in 3 bits [C:/Users/chandrakiran/fpga_accelerate_FIX/fpga_accelerate_FIX.srcs/sim_1/new/prepend_ethernet_header_tb.v:105]

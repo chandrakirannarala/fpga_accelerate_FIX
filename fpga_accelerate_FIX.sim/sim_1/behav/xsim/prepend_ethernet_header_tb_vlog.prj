@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../fpga_accelerate_FIX.srcs/sources_1/new/prepend_ethernet_header.v" \
+"../../../../fpga_accelerate_FIX.srcs/sim_1/new/prepend_ethernet_header_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
