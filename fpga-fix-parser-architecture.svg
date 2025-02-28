@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#f8f9fa" rx="10" ry="10"/>
+  
+  <!-- Title -->
+  <text x="400" y="30" font-family="Arial" font-size="20" text-anchor="middle" fill="#333">FIX Parser FPGA Architecture</text>
+  
+  <!-- Input Section -->
+  <rect x="50" y="70" width="150" height="60" fill="#e6f7ff" stroke="#1890ff" stroke-width="2" rx="5" ry="5"/>
+  <text x="125" y="105" font-family="Arial" font-size="14" text-anchor="middle">UART Receiver</text>
+  
+  <!-- Message Buffer -->
+  <rect x="50" y="180" width="150" height="60" fill="#d9f7be" stroke="#52c41a" stroke-width="2" rx="5" ry="5"/>
+  <text x="125" y="215" font-family="Arial" font-size="14" text-anchor="middle">FIX Message Buffer</text>
+  
+  <!-- Parser -->
+  <rect x="300" y="180" width="150" height="60" fill="#fff2e8" stroke="#fa8c16" stroke-width="2" rx="5" ry="5"/>
+  <text x="375" y="215" font-family="Arial" font-size="14" text-anchor="middle">FIX Parser FSM</text>
+  
+  <!-- ASCII to Binary -->
+  <rect x="300" y="70" width="150" height="60" fill="#f9f0ff" stroke="#722ed1" stroke-width="2" rx="5" ry="5"/>
+  <text x="375" y="105" font-family="Arial" font-size="14" text-anchor="middle">ASCII to Binary</text>
+  
+  <!-- Order Processing -->
+  <rect x="550" y="180" width="150" height="60" fill="#fcffe6" stroke="#a0d911" stroke-width="2" rx="5" ry="5"/>
+  <text x="625" y="215" font-family="Arial" font-size="14" text-anchor="middle">Order Processing</text>
+  
+  <!-- Output Handler -->
+  <rect x="550" y="290" width="150" height="60" fill="#f5f5f5" stroke="#595959" stroke-width="2" rx="5" ry="5"/>
+  <text x="625" y="325" font-family="Arial" font-size="14" text-anchor="middle">Output Handler</text>
+  
+  <!-- Ethernet Header -->
+  <rect x="300" y="290" width="150" height="60" fill="#fffbe6" stroke="#faad14" stroke-width="2" rx="5" ry="5"/>
+  <text x="375" y="325" font-family="Arial" font-size="14" text-anchor="middle">Ethernet Header</text>
+  
+  <!-- Clock and Reset -->
+  <rect x="50" y="400" width="700" height="40" fill="#f0f5ff" stroke="#2f54eb" stroke-width="2" rx="5" ry="5"/>
+  <text x="400" y="425" font-family="Arial" font-size="14" text-anchor="middle">Clock and Reset Distribution</text>
+  
+  <!-- Connections -->
+  <!-- UART to Buffer -->
+  <line x1="125" y1="130" x2="125" y2="180" stroke="#1890ff" stroke-width="2"/>
+  <!-- Buffer to Parser -->
+  <line x1="200" y1="210" x2="300" y2="210" stroke="#52c41a" stroke-width="2"/>
+  <!-- Parser to ASCII Converter -->
+  <line x1="375" y1="180" x2="375" y2="130" stroke="#fa8c16" stroke-width="2"/>
+  <!-- Parser to Order Processing -->
+  <line x1="450" y1="210" x2="550" y2="210" stroke="#fa8c16" stroke-width="2"/>
+  <!-- Order Processing to Output Handler -->
+  <line x1="625" y1="240" x2="625" y2="290" stroke="#a0d911" stroke-width="2"/>
+  <!-- Parser to Ethernet Header -->
+  <line x1="375" y1="240" x2="375" y2="290" stroke="#fa8c16" stroke-width="2"/>
+  <!-- Ethernet Header to Output Handler -->
+  <line x1="450" y1="320" x2="550" y2="320" stroke="#faad14" stroke-width="2"/>
+  
+  <!-- Data Path Labels -->
+  <text x="140" y="160" font-family="Arial" font-size="10" fill="#666">ASCII Data</text>
+  <text x="250" y="200" font-family="Arial" font-size="10" fill="#666">Message Chunks</text>
+  <text x="380" y="160" font-family="Arial" font-size="10" fill="#666">Field Values</text>
+  <text x="500" y="200" font-family="Arial" font-size="10" fill="#666">Parsed Fields</text>
+  <text x="640" y="270" font-family="Arial" font-size="10" fill="#666">Processed Orders</text>
+  <text x="380" y="270" font-family="Arial" font-size="10" fill="#666">Message Format</text>
+  <text x="500" y="310" font-family="Arial" font-size="10" fill="#666">Ethernet Frames</text>
+</svg>
